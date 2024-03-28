@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "a19a8176-9d9c-4b0f-8907-90de6e8563ce",
+		"name": "UMAI-Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8201672"
+	},
+	"item": [
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_email\": \"user1@test.com\",\n    \"title\": \"This is some post title\",\n    \"content\": \"This is some post content\",\n    \"author_ip\": \"127.0.0.1\",\n    \"author_login\": \"user1username\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/posts",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rate Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"post_id\": 3,\n    \"value\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/rate_post",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"rate_post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Posts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"limit\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/get_top_posts_by_average_rating",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"get_top_posts_by_average_rating"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ips with Authors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/get_ips_with_authors",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"get_ips_with_authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Feedback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 2,\n    \"comment\": \"This is a post feedback\",\n    \"owner_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/feedbacks",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"feedbacks"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
