@@ -1,5 +1,6 @@
 require 'socket'
 require_relative 'env'
+require_relative 'db'
 
 puts 'Initializing.........!'
 puts 'Program Execution is Starting.........!'
@@ -18,13 +19,12 @@ puts 'Executing the Test Cases of Feedbacks Controller.........!'
 system('ruby tests/controllers/api/v1/feedbacks_controller_test.rb')
 puts 'Tests Execution is completed.........!'
 
-require_relative 'db'
 require_relative 'seeds'
 require_relative 'controllers/api/v1/posts_controller'
 require_relative 'controllers/api/v1/feedbacks_controller'
 
 puts 'Running the worker for Feedback xml file generator!.........!'
-system('ruby jobs/feedbacks_xml_file_job.rb')
+Process.spawn('ruby jobs/feedbacks_xml_file_job.rb')
 puts 'XML generation completed!'
 
 puts 'Starting the Server!'

@@ -38,11 +38,11 @@ def write_xml_to_file(xml_content)
 end
 
 def execute_worker
-  feedbacks = []
   loop do
     current_time = Time.now
     if current_time.hour == 9 && current_time.min == 0
       feedback_data = fetch_feedbacks
+      feedbacks = []
       feedback_data.each_line do |line|
         id, user_id, post_id, comment, owner_id = line.strip.split("\t")
         feedbacks << { id: id, post_id: post_id, user_id: user_id, comment: comment, owner_id: owner_id }
