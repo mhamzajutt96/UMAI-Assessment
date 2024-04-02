@@ -1,10 +1,22 @@
 # UMAI ROR ASSESSMENT
 
-Ruby Version Used = 3.3.0
+> Prerequisites needed to run the project
 
-To Execute the project, please clone the repository and in the local directory, type 
+- Ruby Language
+- MySQL Installation
 
-`ruby app.rb`
+> Versions Needed
+
+- Ruby Version Used = 3.3.0, but it can be executable with any ruby version >= than 3.0.0
+- Any Mysql Version Installation
+
+> To Execute the project, please clone the repository and in the local directory, type 
+
+- `ruby app.rb`
+
+> Note: One dependency to run the project is to have the local installation of mysql without any password, so if you have any password, please temporarily remove it!
+
+After this you are good to go!
 
 Postman Collection Link
 
