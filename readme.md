@@ -21,3 +21,11 @@ After this you are good to go!
 Postman Collection Link
 
 https://documenter.getpostman.com/view/8201672/2sA35EaicD
+
+> Approach I followed and my thinking process:
+
+- I used the system commands directly to execute the mysql commands to interact with the database,
+The reason I chose this approach is because of it's independent behaviour! So we are not dependent on any mysql version or any gem installation.
+- I used the default minitest library for writing the test cases.
+- I used the bulk insertion approach to insert the seeds.
+- I used the ruby background process to execute the Worker.
